@@ -1,20 +1,20 @@
 import styles from './form.module.css'
 
-function Form() {
+function Form({ createUser, inputName, inputAge, inputEmail }) {
     return (
         <>
             <div className={styles.container}>
-                <form className={styles.form}>
+                <form onSubmit={(e) => e.preventDefault()} className={styles.form}>
                     <h1>Cadastro de Usuários</h1>
                     
                     <div className={styles.inputs}>
-                        <input type="text" className={styles.input_text} placeholder='Digite seu nome' />
+                        <input ref={inputName} type="text" className={styles.input_text} placeholder='Digite seu nome' required />
 
-                        <input type="number" className={styles.input_text} placeholder='Digite sua idade' />
+                        <input ref={inputAge} type="number" className={styles.input_text} placeholder='Digite sua idade' required />
 
-                        <input type="email" className={styles.input_text} placeholder='Digite seu email' />
+                        <input ref={inputEmail} type="email" className={styles.input_text} placeholder='Digite seu email' required />
 
-                        <input className={styles.button} type="submit" value="Cadastrar" />
+                        <input onClick={createUser} className={styles.button} type="submit" value="Cadastrar" />
                     </div>
                 </form>
             </div>

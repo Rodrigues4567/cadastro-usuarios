@@ -14,3 +14,7 @@ li {
     border-radius: 1rem;
     padding: 1rem;
 }
+
+.deleteButton {
+    cursor: pointer;
+}
