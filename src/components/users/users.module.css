@@ -1,0 +1,16 @@
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    
+}
+
+li {
+    background-color: #6e0ff2;
+    color: #eeeeee;
+    border-radius: 1rem;
+    padding: 1rem;
+}
