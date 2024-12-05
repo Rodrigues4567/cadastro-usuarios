@@ -9,9 +9,11 @@ function Users({ usersInfo, deleteUsers }) {
                     <ul>
                         {usersInfo.map((user) => (
                             <li key={user.id}>
-                                <p><strong>Nome:</strong> {user.name}</p>
-                                <p><strong>Idade:</strong> {user.age}</p>
-                                <p><strong>Email:</strong> {user.email}</p>
+                                <div className={styles.users_info}>
+                                    <p><strong>Nome:</strong> {user.name}</p>
+                                    <p><strong>Idade:</strong> {user.age}</p>
+                                    <p><strong>Email:</strong> {user.email}</p>
+                                </div>
                                 <button onClick={() => deleteUsers(user.id)} className={styles.deleteButton}><FaRegTrashAlt /></button>
                             </li>
                         ))}

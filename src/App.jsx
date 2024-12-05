@@ -25,6 +25,10 @@ function App() {
   }
 
   async function createUser() {
+    if (!inputName.current.value || !inputAge.current.value || !inputEmail.current.value) {
+      return alert('Preencha os campos corretamente!')
+    }
+
     await api.post('/cadastro', {
       name: inputName.current.value,
       age: inputAge.current.value,
